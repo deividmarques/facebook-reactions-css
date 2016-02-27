@@ -1,0 +1,15 @@
+{
+  "name": "face-emotions",
+  "version": "1.0.0",
+  "description": "Facebook emotions sample",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Deivid Marques",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.2.0"
+  }
+}
