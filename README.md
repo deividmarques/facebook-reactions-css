@@ -2,7 +2,7 @@
 
 Facebook reactions only CSS.
 
-[Access](http://deividmarques.github.io/facebook-reactions-css/)
+[Access reactions](http://deividmarques.github.io/facebook-reactions-css/)
 
 # Prints Mobile
 
