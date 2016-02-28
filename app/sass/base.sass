@@ -88,6 +88,14 @@ body
     ~ .text-desc
         @extend %show
 
+  &:checked:focus
+    ~ .label-reactions
+      border-color: transparent
+
+    ~ .text-desc
+      background: red
+      @extend %hidden
+
 .label-reactions
   background: url(https://cdn4.iconfinder.com/data/icons/facebook-likes/100/1.png) no-repeat 0 0
   border: 2px dotted transparent
@@ -135,9 +143,6 @@ body
 
 //When is checked
 .field-reactions:checked
-
-  &:focus .label-reactions
-    border-color: transparent
 
   ~ [class*="reaction-"]
     transform: scale(.8) translateY(-40px)

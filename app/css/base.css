@@ -6,7 +6,7 @@ body {
   background: #e9eaed;
   font-family: arial, sans-serif; }
 
-.text-desc, [class*="reaction-"], .field-reactions {
+.text-desc, [class*="reaction-"], .field-reactions, .field-reactions:checked:focus ~ .text-desc {
   clip: rect(1px, 1px, 1px, 1px);
   overflow: hidden;
   position: absolute;
@@ -78,6 +78,12 @@ body {
 .field-reactions:focus ~ .label-reactions {
   border-color: rgba(88, 144, 255, 0.3); }
 
+.field-reactions:checked:focus ~ .label-reactions {
+  border-color: transparent; }
+
+.field-reactions:checked:focus ~ .text-desc {
+  background: red; }
+
 .label-reactions {
   background: url(https://cdn4.iconfinder.com/data/icons/facebook-likes/100/1.png) no-repeat 0 0;
   border: 2px dotted transparent;
@@ -121,9 +127,6 @@ body {
   text-align: center;
   top: -28px;
   transform: translateX(-50%); }
-
-.field-reactions:checked:focus .label-reactions {
-  border-color: transparent; }
 
 .field-reactions:checked ~ [class*="reaction-"] {
   transform: scale(0.8) translateY(-40px); }
