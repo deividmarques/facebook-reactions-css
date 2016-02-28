@@ -3,7 +3,8 @@
   margin: 0; }
 
 body {
-  background: #e9eaed; }
+  background: #e9eaed;
+  font-family: arial, sans-serif; }
 
 [class*="emotion-"], .field-emotions {
   clip: rect(1px, 1px, 1px, 1px);
@@ -11,6 +12,14 @@ body {
   position: absolute;
   top: 0;
   left: 0; }
+
+.main-title {
+  background: #3a5795;
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); }
 
 [class*="emotion-"] {
   border: none;
@@ -90,8 +99,7 @@ body {
   position: absolute;
   text-align: center;
   top: -28px;
-  transform: translateX(-50%);
-  font-family: arial, sans-serif; }
+  transform: translateX(-50%); }
 
 .field-emotions:checked ~ [class*="emotion-"] {
   clip: auto;
