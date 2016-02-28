@@ -6,12 +6,17 @@ body {
   background: #e9eaed;
   font-family: arial, sans-serif; }
 
-[class*="emotion-"], .field-emotions {
+.sub-title, [class*="emotion-"], .field-emotions {
   clip: rect(1px, 1px, 1px, 1px);
   overflow: hidden;
   position: absolute;
   top: 0;
   left: 0; }
+
+.field-emotions:focus ~ .sub-title, .field-emotions:checked ~ [class*="emotion-"] {
+  clip: auto;
+  overflow: visible;
+  opacity: 1; }
 
 .main-title {
   background: #3a5795;
@@ -20,6 +25,14 @@ body {
   text-align: center;
   font-size: 16px;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); }
+
+.sub-title {
+  transform: translateY(-100px);
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: normal;
+  width: 100%;
+  text-align: center; }
 
 [class*="emotion-"] {
   border: none;
@@ -103,10 +116,7 @@ body {
   transform: translateX(-50%); }
 
 .field-emotions:checked ~ [class*="emotion-"] {
-  clip: auto;
-  overflow: visible;
-  transform: scale(0.8) translateY(-40px);
-  opacity: 1; }
+  transform: scale(0.8) translateY(-40px); }
   .field-emotions:checked ~ [class*="emotion-"]:hover, .field-emotions:checked ~ [class*="emotion-"]:focus {
     transition: all .2s ease-in;
     transform: scale(1) translateY(-35px); }

@@ -13,6 +13,11 @@ body
   top: 0
   left: 0
 
+%show
+  clip: auto
+  overflow: visible
+  opacity: 1
+
 .main-title
   background: #3a5795
   padding: 10px
@@ -21,6 +26,14 @@ body
   font-size: 16px
   text-shadow: 1px 1px 3px rgba(0,0,0,.3)
 
+.sub-title
+  @extend %hidden
+  transform: translateY(-100px)
+  white-space: nowrap
+  font-size: 13px
+  font-weight: normal
+  width: 100%
+  text-align: center
 
 [class*="emotion-"]
   @extend %hidden
@@ -60,8 +73,12 @@ body
 .field-emotions
   @extend %hidden
 
-  &:focus ~ .label-emotions
-    border-color: rgba(88,144,255,.3)
+  &:focus
+    ~ .label-emotions
+      border-color: rgba(88,144,255,.3)
+
+    ~ .sub-title
+        @extend %show
 
 .label-emotions
   background: url(https://cdn4.iconfinder.com/data/icons/facebook-likes/100/1.png) no-repeat 0 0
@@ -107,13 +124,13 @@ body
   top: -28px
   transform: translateX(-50%)
 
+
+//When is checked
 .field-emotions:checked
 
   ~ [class*="emotion-"]
-    clip: auto
-    overflow: visible
     transform: scale(.8) translateY(-40px)
-    opacity: 1
+    @extend %show
 
     &:hover,
     &:focus
