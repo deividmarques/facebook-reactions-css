@@ -43,9 +43,11 @@ body
   opacity: 0
 
 .box
-  margin: 200px auto
-  position: relative
+  position: absolute
+  left: 50%
+  top: 50%
   width: 300px
+  transform: translate(-50%)
 
 .overlay
   position: fixed
@@ -98,7 +100,7 @@ body
   max-width: 100%
   opacity: 0
   overflow: hidden
-  padding: 0 8px
+  padding: 0 6px
   transition: opacity 50ms ease
   left: 50%
   position: absolute
