@@ -42,10 +42,9 @@ body {
 
 .box {
   position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 300px;
-  transform: translate(-50%); }
+  left: calc(50% - 150px);
+  top: calc(50% - 50px);
+  width: 300px; }
 
 .overlay {
   position: fixed;
