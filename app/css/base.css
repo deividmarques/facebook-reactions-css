@@ -6,14 +6,14 @@ body {
   background: #e9eaed;
   font-family: arial, sans-serif; }
 
-.text-desc, [class*="reaction-"], .field-reactions, .field-reactions:checked:focus ~ .text-desc {
+.text-desc, [class*="reaction-"], .field-reactions, .field-reactions:checked:focus ~ .text-desc, .field-reactions:focus:target ~ .text-desc {
   clip: rect(1px, 1px, 1px, 1px);
   overflow: hidden;
   position: absolute;
   top: 0;
   left: 0; }
 
-.field-reactions:focus ~ .text-desc, .field-reactions:checked ~ [class*="reaction-"] {
+.field-reactions:focus ~ .text-desc, .box:hover [class*="reaction-"], .field-reactions:checked ~ [class*="reaction-"] {
   clip: auto;
   overflow: visible;
   opacity: 1; }
@@ -26,16 +26,9 @@ body {
   font-size: 16px;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); }
 
-.sub-title {
-  margin: 30px 0 0;
-  font-size: 16px; }
-
-.sub-title,
 .text-desc {
   font-weight: normal;
-  text-align: center; }
-
-.text-desc {
+  text-align: center;
   transform: translateY(-50px);
   white-space: nowrap;
   font-size: 13px;
@@ -54,7 +47,7 @@ body {
   z-index: 11;
   top: -28;
   transform-origin: 50% 100%;
-  transform: scale(0.8);
+  transform: scale(0.1);
   transition: all .3s, background-position .1s;
   outline: none;
   will-change: transform;
@@ -78,14 +71,14 @@ body {
 .field-reactions:focus ~ .label-reactions {
   border-color: rgba(88, 144, 255, 0.3); }
 
-.field-reactions:checked:focus ~ .label-reactions {
+.field-reactions:checked:focus ~ .label-reactions, .field-reactions:focus:target ~ .label-reactions {
   border-color: transparent; }
 
-.field-reactions:checked:focus ~ .text-desc {
+.field-reactions:checked:focus ~ .text-desc, .field-reactions:focus:target ~ .text-desc {
   background: red; }
 
 .label-reactions {
-  background: url(https://cdn4.iconfinder.com/data/icons/facebook-likes/100/1.png) no-repeat 0 0;
+  background: url(../images/like-image.png) no-repeat center;
   border: 2px dotted transparent;
   display: block;
   height: 100px;
@@ -128,6 +121,35 @@ body {
   top: -28px;
   transform: translateX(-50%); }
 
+.box:hover [class*="reaction-"] {
+  transform: scale(0.8) translateY(-40px); }
+  .box:hover [class*="reaction-"]:hover, .box:hover [class*="reaction-"]:focus {
+    transition: all .2s ease-in;
+    transform: scale(1) translateY(-35px); }
+    .box:hover [class*="reaction-"]:hover .legend-reaction, .box:hover [class*="reaction-"]:focus .legend-reaction {
+      opacity: 1; }
+
+.box:hover .toolbox {
+  opacity: 1; }
+
+.box:hover .toolbox {
+  visibility: visible; }
+
+.box:hover .reaction-love {
+  transition-delay: .03s; }
+
+.box:hover .reaction-haha {
+  transition-delay: .09s; }
+
+.box:hover .reaction-wow {
+  transition-delay: .12s; }
+
+.box:hover .reaction-sad {
+  transition-delay: .15s; }
+
+.box:hover .reaction-angry {
+  transition-delay: .18s; }
+
 .field-reactions:checked ~ [class*="reaction-"] {
   transform: scale(0.8) translateY(-40px); }
   .field-reactions:checked ~ [class*="reaction-"]:hover, .field-reactions:checked ~ [class*="reaction-"]:focus {
@@ -139,10 +161,8 @@ body {
 .field-reactions:checked ~ .toolbox {
   opacity: 1; }
 
+.field-reactions:checked ~ .toolbox,
 .field-reactions:checked ~ .overlay {
-  visibility: visible; }
-
-.field-reactions:checked ~ .toolbox {
   visibility: visible; }
 
 .field-reactions:checked ~ .reaction-love {
