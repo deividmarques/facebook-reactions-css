@@ -6,14 +6,14 @@ body {
   background: #e9eaed;
   font-family: arial, sans-serif; }
 
-.text-desc, [class*="emotion-"], .field-emotions {
+.text-desc, [class*="reaction-"], .field-reactions {
   clip: rect(1px, 1px, 1px, 1px);
   overflow: hidden;
   position: absolute;
   top: 0;
   left: 0; }
 
-.field-emotions:focus ~ .text-desc, .field-emotions:checked ~ [class*="emotion-"] {
+.field-reactions:focus ~ .text-desc, .field-reactions:checked ~ [class*="reaction-"] {
   clip: auto;
   overflow: visible;
   opacity: 1; }
@@ -36,12 +36,12 @@ body {
   text-align: center; }
 
 .text-desc {
-  transform: translateY(-100px);
+  transform: translateY(-50px);
   white-space: nowrap;
   font-size: 13px;
   width: 100%; }
 
-[class*="emotion-"] {
+[class*="reaction-"] {
   border: none;
   background-image: url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yh/r/sqhTN9lgaYm.png);
   background-color: transparent;
@@ -75,10 +75,10 @@ body {
   z-index: 9;
   visibility: hidden; }
 
-.field-emotions:focus ~ .label-emotions {
+.field-reactions:focus ~ .label-reactions {
   border-color: rgba(88, 144, 255, 0.3); }
 
-.label-emotions {
+.label-reactions {
   background: url(https://cdn4.iconfinder.com/data/icons/facebook-likes/100/1.png) no-repeat 0 0;
   border: 2px dotted transparent;
   display: block;
@@ -101,7 +101,7 @@ body {
   opacity: 0;
   transition: opacity .15s; }
 
-.legend-emotion {
+.legend-reaction {
   background: rgba(0, 0, 0, 0.75);
   border-radius: 10px;
   box-sizing: border-box;
@@ -122,57 +122,60 @@ body {
   top: -28px;
   transform: translateX(-50%); }
 
-.field-emotions:checked ~ [class*="emotion-"] {
+.field-reactions:checked:focus .label-reactions {
+  border-color: transparent; }
+
+.field-reactions:checked ~ [class*="reaction-"] {
   transform: scale(0.8) translateY(-40px); }
-  .field-emotions:checked ~ [class*="emotion-"]:hover, .field-emotions:checked ~ [class*="emotion-"]:focus {
+  .field-reactions:checked ~ [class*="reaction-"]:hover, .field-reactions:checked ~ [class*="reaction-"]:focus {
     transition: all .2s ease-in;
     transform: scale(1) translateY(-35px); }
-    .field-emotions:checked ~ [class*="emotion-"]:hover .legend-emotion, .field-emotions:checked ~ [class*="emotion-"]:focus .legend-emotion {
+    .field-reactions:checked ~ [class*="reaction-"]:hover .legend-reaction, .field-reactions:checked ~ [class*="reaction-"]:focus .legend-reaction {
       opacity: 1; }
 
-.field-emotions:checked ~ .toolbox {
+.field-reactions:checked ~ .toolbox {
   opacity: 1; }
 
-.field-emotions:checked ~ .overlay {
+.field-reactions:checked ~ .overlay {
   visibility: visible; }
 
-.field-emotions:checked ~ .toolbox {
+.field-reactions:checked ~ .toolbox {
   visibility: visible; }
 
-.field-emotions:checked ~ .emotion-love {
+.field-reactions:checked ~ .reaction-love {
   transition-delay: .03s; }
 
-.field-emotions:checked ~ .emotion-haha {
+.field-reactions:checked ~ .reaction-haha {
   transition-delay: .09s; }
 
-.field-emotions:checked ~ .emotion-wow {
+.field-reactions:checked ~ .reaction-wow {
   transition-delay: .12s; }
 
-.field-emotions:checked ~ .emotion-sad {
+.field-reactions:checked ~ .reaction-sad {
   transition-delay: .15s; }
 
-.field-emotions:checked ~ .emotion-angry {
+.field-reactions:checked ~ .reaction-angry {
   transition-delay: .18s; }
 
-.emotion-like {
+.reaction-like {
   left: 0;
   background-position: 0 -144px; }
 
-.emotion-love {
+.reaction-love {
   background-position: 0 -192px;
   left: 50px; }
 
-.emotion-haha {
+.reaction-haha {
   background-position: 0 -96px;
   left: 100px; }
 
-.emotion-wow {
+.reaction-wow {
   background-position: 0 -288px;
   left: 150px; }
 
-.emotion-sad {
+.reaction-sad {
   background-position: 0 -240px;
   left: 200px; }
 
-.emotion-angry {
+.reaction-angry {
   left: 250px; }

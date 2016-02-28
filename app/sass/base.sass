@@ -37,13 +37,13 @@ body
 
 .text-desc
   @extend %hidden
-  transform: translateY(-100px)
+  transform: translateY(-50px)
   white-space: nowrap
   font-size: 13px
   width: 100%
 
 
-[class*="emotion-"]
+[class*="reaction-"]
   @extend %hidden
   border: none
   background-image: url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yh/r/sqhTN9lgaYm.png)
@@ -78,17 +78,17 @@ body
   z-index: 9
   visibility: hidden
 
-.field-emotions
+.field-reactions
   @extend %hidden
 
   &:focus
-    ~ .label-emotions
+    ~ .label-reactions
       border-color: rgba(88,144,255,.3)
 
     ~ .text-desc
         @extend %show
 
-.label-emotions
+.label-reactions
   background: url(https://cdn4.iconfinder.com/data/icons/facebook-likes/100/1.png) no-repeat 0 0
   border: 2px dotted transparent
   display: block
@@ -111,7 +111,7 @@ body
   opacity: 0
   transition: opacity .15s
 
-.legend-emotion
+.legend-reaction
   background: rgba(0, 0, 0, .75)
   border-radius: 10px
   box-sizing: border-box
@@ -134,9 +134,12 @@ body
 
 
 //When is checked
-.field-emotions:checked
+.field-reactions:checked
 
-  ~ [class*="emotion-"]
+  &:focus .label-reactions
+    border-color: transparent
+
+  ~ [class*="reaction-"]
     transform: scale(.8) translateY(-40px)
     @extend %show
 
@@ -145,7 +148,7 @@ body
       transition: all .2s ease-in
       transform: scale(1) translateY(-35px)
 
-      .legend-emotion
+      .legend-reaction
         opacity: 1
 
   ~ .toolbox
@@ -157,40 +160,40 @@ body
   ~ .toolbox
     visibility: visible
 
-  ~ .emotion-love
+  ~ .reaction-love
       transition-delay: .03s
 
-  ~ .emotion-haha
+  ~ .reaction-haha
       transition-delay: .09s
 
-  ~ .emotion-wow
+  ~ .reaction-wow
       transition-delay: .12s
 
-  ~ .emotion-sad
+  ~ .reaction-sad
       transition-delay: .15s
 
-  ~ .emotion-angry
+  ~ .reaction-angry
       transition-delay: .18s
 
-.emotion-like
+.reaction-like
   left: 0
   background-position: 0 -144px
 
-.emotion-love
+.reaction-love
   background-position: 0 -192px
   left: 50px
 
-.emotion-haha
+.reaction-haha
   background-position: 0 -96px
   left: 100px
 
-.emotion-wow
+.reaction-wow
   background-position: 0 -288px
   left: 150px
 
-.emotion-sad
+.reaction-sad
   background-position: 0 -240px
   left: 200px
 
-.emotion-angry
+.reaction-angry
   left: 250px
