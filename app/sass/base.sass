@@ -1,0 +1,161 @@
+*
+  padding: 0
+  margin: 0
+
+body
+  background: #e9eaed
+
+%hidden
+  clip: rect(1px, 1px, 1px, 1px)
+  overflow: hidden
+  position: absolute
+  top: 0
+  left: 0
+
+[class*="emotion-"]
+  @extend %hidden
+  border: none
+  background-image: url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yh/r/sqhTN9lgaYm.png)
+  background-color: transparent
+  display: block
+  cursor: pointer
+  height: 48px
+  image-rendering: crisp-edges
+  position: absolute
+  width: 48px
+  z-index: 11
+  top: -28
+  transform-origin: 50% 100%
+  transform: scale(.8)
+  transition: all .3s, background-position .1s
+  outline: none
+  will-change: transform
+  opacity: 0
+
+.box
+  margin: 200px auto
+  position: relative
+  width: 300px
+
+.overlay
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: 9
+  visibility: hidden
+
+.field-emotions
+  @extend %hidden
+
+  &:focus ~ .label-emotions
+    border-color: rgba(88,144,255,.3)
+
+.label-emotions
+  background: url(https://cdn4.iconfinder.com/data/icons/facebook-likes/100/1.png) no-repeat 0 0
+  border: 2px dotted transparent
+  display: block
+  height: 100px
+  margin: 0 auto
+  width: 100px
+  color: transparent
+  cursor: pointer
+
+.toolbox
+  background: #fff
+  height: 52px
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, .08), 0 2px 2px rgba(0, 0, 0, .15)
+  width: 300px
+  border-radius: 40px
+  top: -30px
+  left: 0
+  position: absolute
+  visibility: hidden
+  opacity: 0
+  transition: opacity .15s
+
+.legend-emotion
+  background: rgba(0, 0, 0, .75)
+  border-radius: 10px
+  box-sizing: border-box
+  color: #fff
+  display: inline-block
+  font-size: 11px
+  text-overflow: ellipsis
+  font-weight: bold
+  line-height: 20px
+  max-width: 100%
+  opacity: 0
+  overflow: hidden
+  padding: 0 8px
+  transition: opacity 50ms ease
+  left: 50%
+  position: absolute
+  text-align: center
+  top: -28px
+  transform: translateX(-50%)
+  font-family: arial, sans-serif
+
+.field-emotions:checked
+
+  ~ [class*="emotion-"]
+    clip: auto
+    overflow: visible
+    transform: scale(.8) translateY(-40px)
+    opacity: 1
+
+    &:hover,
+    &:focus
+      transition: all .2s ease-in
+      transform: scale(1) translateY(-35px)
+
+      .legend-emotion
+        opacity: 1
+
+  ~ .toolbox
+    opacity: 1
+
+  ~ .overlay
+    visibility: visible
+
+  ~ .toolbox
+    visibility: visible
+
+  ~ .emotion-love
+      transition-delay: .03s
+
+  ~ .emotion-haha
+      transition-delay: .09s
+
+  ~ .emotion-wow
+      transition-delay: .12s
+
+  ~ .emotion-sad
+      transition-delay: .15s
+
+  ~ .emotion-angry
+      transition-delay: .18s
+
+.emotion-like
+  left: 0
+  background-position: 0 -144px
+
+.emotion-love
+  background-position: 0 -192px
+  left: 50px
+
+.emotion-haha
+  background-position: 0 -96px
+  left: 100px
+
+.emotion-wow
+  background-position: 0 -288px
+  left: 150px
+
+.emotion-sad
+  background-position: 0 -240px
+  left: 200px
+
+.emotion-angry
+  left: 250px
