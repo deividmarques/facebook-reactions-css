@@ -41,7 +41,6 @@ body {
   display: block;
   cursor: pointer;
   height: 48px;
-  image-rendering: crisp-edges;
   position: absolute;
   width: 48px;
   z-index: 11;
