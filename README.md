@@ -1,6 +1,6 @@
 # Facebook reactions only CSS
 
-Facebook reactions only CSS.
+Facebook reactions developed only with html and css.
 
 [Access reactions](http://deividmarques.github.io/facebook-reactions-css/)
 
