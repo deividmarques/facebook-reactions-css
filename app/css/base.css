@@ -6,7 +6,7 @@ body {
   background: #e9eaed;
   font-family: arial, sans-serif; }
 
-.text-desc, [class*="reaction-"], .field-reactions, .field-reactions:checked:focus ~ .text-desc, .field-reactions:focus:target ~ .text-desc {
+.text-desc, [class*="reaction-"], .field-reactions, .field-reactions:checked:focus ~ .text-desc {
   clip: rect(1px, 1px, 1px, 1px);
   overflow: hidden;
   position: absolute;
@@ -70,10 +70,10 @@ body {
 .field-reactions:focus ~ .label-reactions {
   border-color: rgba(88, 144, 255, 0.3); }
 
-.field-reactions:checked:focus ~ .label-reactions, .field-reactions:focus:target ~ .label-reactions {
+.field-reactions:checked:focus ~ .label-reactions {
   border-color: transparent; }
 
-.field-reactions:checked:focus ~ .text-desc, .field-reactions:focus:target ~ .text-desc {
+.field-reactions:checked:focus ~ .text-desc {
   background: red; }
 
 .label-reactions {
