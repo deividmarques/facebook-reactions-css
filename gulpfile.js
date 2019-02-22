@@ -6,13 +6,8 @@ var gulp         = require('gulp'),
     sass         = require('gulp-sass'),
     inject       = require('gulp-inject'),
     browserSync  = require('browser-sync'),
-    svg          = require('gulp-svgmin'),
-    svgstore     = require('gulp-svgstore'),
     autoprefixer = require('gulp-autoprefixer'),
-    uglify       = require('gulp-uglify'),
-    path         = require('path');
     ghPages      = require('gulp-gh-pages');
-    babel        = require('gulp-babel');
 
 gulp.task('sass', function() {
   return gulp.src('./build/index.html')
@@ -29,45 +24,6 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('./build'));
 });
 
-gulp.task('javascript', function() {
-  return gulp.src('./build/index.html')
-    .pipe(inject(
-      gulp.src('./source/js/**/*.js')
-        .pipe(babel())
-        .pipe(uglify({
-            mangle: false
-        }))
-        .pipe(gulp.dest('./build/assets/js')), {
-          ignorePath: '/build',
-          relative:   true
-        }
-    ))
-    .pipe(gulp.dest('./build'));
-});
-
-gulp.task('svg', function() {
-  return gulp.src('./build/index.html')
-    .pipe(inject(gulp.src('./source/images/**/*.svg')
-      .pipe(svg(function(file) {
-        return {
-          plugins: [{
-            cleanupIDs: {
-              prefix: path.basename(file.relative, path.extname(file.relative)) + '-',
-              minify: true
-            }
-          }]
-        };
-      }))
-      .pipe(svgstore({
-        inlineSvg: true,
-      })), {
-        transform: function(path, file) {
-          return file.contents.toString();
-        }
-      }
-    ))
-    .pipe(gulp.dest('./build'));
-});
 
 gulp.task('images', function() {
   return gulp.src('./source/images/**/*.+(png|jpeg|jpg|gif|mp4|ico|svg)')
@@ -87,9 +43,7 @@ gulp.task('index', gulp.series(
       .pipe(gulp.dest('./build'));
   },
   'readme',
-  'sass',
-  'javascript',
-  'svg'
+  'sass'
 ));
 
 gulp.task('reset', function() {
@@ -111,8 +65,6 @@ gulp.task('default', gulp.series(
 
     gulp.watch('./source/index.html', gulp.series('index', browserSync.reload));
     gulp.watch('./source/sass/**/*.+(scss|sass)', gulp.series('sass'));
-    gulp.watch('./source/js/**/*.js', gulp.series('javascript', browserSync.reload));
-    gulp.watch('./source/svg/**/*.svg', gulp.series('svg', browserSync.reload));
     gulp.watch('./source/images/**/*.+(png|jpeg|jpg|gif|mp4|ico)', gulp.series('images', browserSync.reload));
   })
 );
