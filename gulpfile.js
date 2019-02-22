@@ -74,11 +74,19 @@ gulp.task('images', function() {
     .pipe(gulp.dest('./build/assets/images'));
 });
 
+gulp.task('readme', gulp.series(
+  function() {
+    return gulp.src('./source/README.md')
+      .pipe(gulp.dest('./build'));
+  }
+));
+
 gulp.task('index', gulp.series(
   function() {
-    return gulp.src('./source/index.html')
+    return gulp.src(['./source/index.html'])
       .pipe(gulp.dest('./build'));
   },
+  'readme',
   'sass',
   'javascript',
   'svg'
