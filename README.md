@@ -12,3 +12,41 @@ Facebook reactions developed only with html and css.
 
 
 Project by Deivid Marques
+
+
+# To develper
+
+## Dependencies
+
+- Gulp versão 4
+- npm
+
+## Instalation
+
+Install Gulp - run the command below on the terminal:
+
+```
+npm install gulpjs/gulp-cli -g
+npm install gulpjs/gulp.git#4.0 --save-dev
+```
+after of the install gulp , run
+
+```
+npm install
+
+```
+
+## run local
+
+run the command:
+
+```
+gulp
+
+```
+
+The project run the default port: http://localhost:3001
+_____
+
+
+
