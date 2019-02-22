@@ -1,2 +1,7 @@
-dist
 node_modules
+/source/assets
+/build
+.publish/
+.DS_Store
+*.zip
+*.lock
