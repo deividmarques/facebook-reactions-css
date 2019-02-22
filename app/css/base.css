@@ -36,7 +36,7 @@ body {
 
 [class*="reaction-"] {
   border: none;
-  background-image: url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yh/r/sqhTN9lgaYm.png);
+  background-image: url(../images/facebook-reactions.png);
   background-color: transparent;
   display: block;
   cursor: pointer;
