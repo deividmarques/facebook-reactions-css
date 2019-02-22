@@ -6,9 +6,9 @@ Facebook reactions developed only with html and css.
 
 # Prints Mobile
 
-![alt tag](http://deividmarques.github.io/facebook-reactions-css/app/images/print-1.jpg)
-![alt tag](http://deividmarques.github.io/facebook-reactions-css/app/images/print-2.jpg)
-![alt tag](http://deividmarques.github.io/facebook-reactions-css/app/images/print-3.jpg)
+![alt tag](http://deividmarques.github.io/facebook-reactions-css/assets/images/print-1.jpg)
+![alt tag](http://deividmarques.github.io/facebook-reactions-css/assets/images/print-2.jpg)
+![alt tag](http://deividmarques.github.io/facebook-reactions-css/assets/images/print-3.jpg)
 
 
 Project by Deivid Marques
