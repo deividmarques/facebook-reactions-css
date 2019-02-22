@@ -184,20 +184,21 @@ body {
   background-position: 0 -144px; }
 
 .reaction-love {
-  background-position: 0 -192px;
+  background-position: -48px 0;
   left: 50px; }
 
 .reaction-haha {
-  background-position: 0 -96px;
+  background-position: -96px 0;
   left: 100px; }
 
 .reaction-wow {
-  background-position: 0 -288px;
+  background-position: -144px 0;
   left: 150px; }
 
 .reaction-sad {
-  background-position: 0 -240px;
+  background-position: -192px 0;
   left: 200px; }
 
 .reaction-angry {
+  background-position: -240px 0;
   left: 250px; }
