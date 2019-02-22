@@ -14,7 +14,7 @@ Facebook reactions developed only with html and css.
 Project by Deivid Marques
 
 
-# To develper
+# To developer
 
 ## Dependencies
 
